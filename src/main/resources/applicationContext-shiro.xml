@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+	<description>Spring Shiro配置</description>
+
+    <bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+        <!-- 单 Realm。如果是多 Realm 需要配置为 'realms' -->
+        <property name="realm" ref="myRealm"/>
+        <property name="cacheManager" ref="shiroCacheManager"/>
+    </bean>
+    <!-- 自定义 Realm 的类 -->
+    <bean id="myRealm" class="com.kingyee.fuxi.security.FuxiRealm"></bean>
+
+    <!-- 配置缓存管理器 -->
+    <bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+        <property name="cacheManager" ref="cacheManagerEhcache"/>
+    </bean>
+
+    <!-- cacheManager, 指定ehcache-shiro.xml的位置 -->
+    <bean id="cacheManagerEhcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+        <property name="configLocation">
+            <value>classpath:ehcache-shiro.xml</value>
+        </property>
+        <!-- 由于hibernate也使用了Ehcache, 保证双方都使用同一个缓存管理器 -->
+        <property name="shared" value="true"/>
+    </bean>
+
+
+    <!-- shiro 的核心，web.xml中委派代理的实质内容就在这里定义 -->
+    <bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+        <property name="securityManager" ref="securityManager"/>
+        <!-- 没有登录的用户请求，将会返回到这个地址 -->
+        <property name="loginUrl" value="/admin/loginInit"/>
+        <!--<property name="successUrl" value="/admin/index"/>-->
+        <!-- <property name="unauthorizedUrl" value="/unauthorized.jsp"/> -->
+        <!-- 权限配置 -->
+        <!--<property name="filterChainDefinitionMap" ref="chainDefinitionSectionMetaSource"/>-->
+    </bean>
+
+    <!--自定义filterChainDefinitionMap-->
+    <!--<bean id="chainDefinitionSectionMetaSource" class=" com.kingyee.fuxi.security.ChainDefinitionSectionMetaSource"/>-->
+    <!-- 配置 Bean 后置处理器: 会自动的调用和 Spring 整合后各个组件的生命周期方法. -->
+    <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+    <!-- authListener -->
+    <bean id="authListener" class="com.kingyee.fuxi.security.AuthListener"></bean>
+</beans>

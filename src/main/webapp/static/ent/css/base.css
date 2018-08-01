@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+body{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:auto;
+    color:#373737;
+    background-color: #fff;
+    margin:0 auto;
+    position:relative;
+    font:12px "Microsoft Yahei",Arial
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:normal;
+    font-size:12px;
+}
+img{
+    display: block;
+    border:none;
+    vertical-align: bottom;
+    width:100%;
+}
+input{
+    outline:none;
+    border:none 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    /*color:#ff0700;*/
+    text-decoration: none;
+}
+.clear:after{
+    clear:both;
+    content:'';
+    display:block;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+/*外边距溢出*/
+.overflow:before{
+	content:'';
+	display: table;
+}

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<jmxConfigurator />
+
+	<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+		<!-- 典型的日志pattern -->
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!-- 按时间滚动的策略 -->
+	<appender name="defaultLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${logpath}logs/cats.log</file>
+		
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${logpath}logs/cats.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<!-- 保留 30天数据，默认无限-->
+			<!--<maxHistory>30</maxHistory>-->
+		</rollingPolicy>
+		
+		<encoder>
+			<pattern>%date{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+	</appender>
+
+    <!-- 按时间滚动的策略:记录错误日志 -->
+    <appender name="errorLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${logpath}logs/cats_error.log</file>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${logpath}logs/cats_error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 保留 30天数据，默认无限-->
+            <!--<maxHistory>30</maxHistory>-->
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{40} - %msg%n</pattern>
+        </encoder>
+        <!-- 只打印错误日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>WARN</level>
+            <onMatch>ACCEPT</onMatch>
+        </filter>
+        <!-- 只打印错误日志 -->
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+	<!--&lt;!&ndash; 按文件大小滚动的策略 &ndash;&gt;-->
+	<!--<appender name="metricsLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+		<!--<file>${logpath}logs/metrics.log</file>-->
+
+		<!--<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">-->
+			<!--<fileNamePattern>${logpath}logs/metrics.%i.log</fileNamePattern>-->
+			<!--&lt;!&ndash; 最多保留10个文件，默认是7 &ndash;&gt;-->
+      		<!--<maxIndex>10</maxIndex>-->
+		<!--</rollingPolicy>-->
+
+		<!--<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">-->
+      		<!--<maxFileSize>10MB</maxFileSize>-->
+      	<!--</triggeringPolicy>-->
+
+		<!--<encoder>-->
+			<!--<pattern>%msg%n</pattern>-->
+		<!--</encoder>-->
+	<!--</appender>-->
+
+	<!--&lt;!&ndash; 综合时间与大小的滚动策略，先按小时滚动，小时内的文件大于10mb时再按大小滚动 &ndash;&gt;-->
+	<!--<appender name="businessLogFile" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
+		<!--<file>${logpath}logs/business.log</file>-->
+
+		<!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
+			<!--<fileNamePattern>${logpath}logs/business-%d{yyyy-MM-dd_HH}.%i.zip</fileNamePattern>-->
+			<!--<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">-->
+				<!--<maxFileSize>10MB</maxFileSize>-->
+			<!--</timeBasedFileNamingAndTriggeringPolicy>-->
+		<!--</rollingPolicy>-->
+
+		<!--<encoder>-->
+			<!--<pattern>%d{HH:mm:ss.SSS},%msg%n</pattern>-->
+		<!--</encoder>-->
+	<!--</appender>-->
+
+	<!-- root -->
+	<root level="INFO">
+		<appender-ref ref="console" />
+		<appender-ref ref="defaultLogFile" />
+        <appender-ref ref="errorLogFile" />
+	</root>
+</configuration>

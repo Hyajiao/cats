@@ -1,0 +1,978 @@
+.comm{
+    width:7rem;
+    margin:0 auto;
+}
+i{
+    display: inline-block;
+}
+/******微信服务号-操作指南******************/
+.operation_guide{
+    width:100%;
+    min-width:7.01rem;
+}
+.operation_guide li{
+    height:1.98rem;
+    line-height:1.98rem;
+    text-align: center;
+    width:100%;
+}
+.operation_guide li>a{
+    display: block;
+    font-size:0.32rem;
+    width:100%;
+    height:100%;
+    color:#2f2f2f;
+}
+.operation_guide .active a{
+    background:#353535;
+    color:#fff;
+}
+.operation_guide li:nth-child(odd){
+    background:#f4f4f4;
+}
+.operation_guide li:nth-child(even){
+    background:#dcdcdc;
+}
+/******微信服务号-操作指南-详情******************/
+.operation_guide_detail .comm>p{
+    position: relative;
+    height:1.05rem;
+}
+.operation_guide_detail .comm>p>img{
+    width:0.7rem;
+    position:absolute;
+    right:0.22rem;
+    top:0;
+}
+.operation_guide_detail_content{
+    padding:0.36rem 0.13rem 0.5rem;
+}
+.operation_guide_detail_title{
+    font-size:0.36rem;
+    color:#2f2f2f;
+    line-height:0.5rem;
+    height:1rem;
+    padding:0 0.36rem;
+    margin-bottom:0.1rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+.operation_guide_detail_content>div{
+    padding:0 0.36rem;
+    line-height:0.72rem;
+    height:0.72rem;
+}
+.operation_guide_detail_content>div>span{
+    display: inline-block;
+    font-size:0.36rem;
+    color:#919191;
+}
+.operation_guide_detail_content>p{
+    color:#565656;
+    font-size:0.28rem;
+    line-height:0.42rem;
+    /*首行文本缩进两个字符*/
+    text-indent: 2em;
+}
+.operation_guide_detail_content>p.operation_guide_detail_txt{
+    margin-top:0.1rem;
+}
+/******微信服务号-个人信息******************/
+.personal_information_top{
+    width:100%;
+    height:2.84rem;
+    background:url("../images/personal_bg.png") top center no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    min-width:7.01rem;
+}
+.personal_information_top .comm>p{
+    position: relative;
+    height:0.8rem;
+}
+.personal_information_top .comm>p>img{
+    width:0.7rem;
+    position:absolute;
+    right:0.22rem;
+    top:0;
+}
+.personal_information{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+}
+.personal_information>img{
+    width:1.38rem;
+    height:1.38rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-left:0.13rem;
+}
+.person_intro{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left:0.2rem;
+    min-width:0;
+}
+.person_intro>h1{
+    font-size:0.36rem;
+    color:#000;
+    height:0.5rem;
+    line-height:0.5rem;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow:ellipsis;
+    white-space:nowrap;
+    margin-bottom:0.08rem;
+}
+.person_intro>h2{
+    font-size:0.3rem;
+    color:#000;
+    height:0.72rem;
+    line-height:0.36rem;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+}
+.personal_list{
+    width:100%;
+    min-width:7.01rem;
+}
+.personal_list li{
+    /*width:100%;*/
+    height:1.2rem;
+    line-height:1.2rem;
+    padding:0 0.37rem;
+}
+.personal_list li:nth-child(2){
+    background:#f1f1f1;
+}
+.personal_list li>a{
+    display: block;
+    width:100%;
+    height:100%;
+    color:#2f2f2f;
+}
+.personal_list li>a span{
+    display: inline-block;
+    font-size:0.28rem;
+    float:left;
+}
+.personal_list li>a div{
+    float: right;
+}
+.personal_list li>a i{
+    width:1px;
+    height:0.15rem;
+    background:#dcdcdc;
+}
+.personal_list li>a i.update_text{
+    width:0.28rem;
+    height:0.28rem;
+    background:url("../images/bg.png") -0.03rem -0.06rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+}
+/******微信服务号-个人信息-编辑******************/
+.edit_information{
+    margin-top:0.96rem;
+}
+.edit_information li{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+    height:0.8rem;
+    line-height:0.8rem;
+    font-size:0.28rem;
+    margin-bottom:0.22rem;
+    position:relative;
+}
+.edit_information li span{
+    display: inline-block;
+    width:18%;
+    height:100%;
+}
+.edit_information li div{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    width:100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left:0.24rem;
+}
+.edit_information li input{
+    background:none;
+    line-height:0.8rem;
+    height:0.8rem;
+    width:100%;
+    border:1px solid #e5e5e5;
+    -webkit-border-radius: 0.03rem;
+    -moz-border-radius: 0.03rem;
+    border-radius: 0.03rem;
+    font-size:0.28rem;
+    padding-left:0.26rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.edit_information li input::-webkit-input-placeholder{
+    color:#dcdcdc;
+}
+.edit_information li input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#dcdcdc;
+}
+.edit_information li input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#dcdcdc;
+}
+.edit_information li input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
+    color:#dcdcdc;
+}
+li.code{
+    position: relative;
+}
+.edit_information li.code input{
+    width:56%;
+}
+.edit_information li.code button{
+    width:1.85rem;
+    height:0.8rem;
+    line-height:0.8rem;
+    background:#c2c2c2;
+    -webkit-border-radius: 0.04rem;
+    -moz-border-radius: 0.04rem;
+    border-radius: 0.04rem;
+    text-align: center;
+    color:#000;
+    font-size:0.28rem;
+    border:none;
+    position:absolute;
+    right:0;
+}
+a.commit{
+    display: block;
+    width:100%;
+    height:0.82rem;
+    line-height:0.82rem;
+    background:#515151;
+    text-align: center;
+    color:#fff;
+    font-size:0.28rem;
+    -webkit-border-radius: 0.06rem;
+    -moz-border-radius: 0.06rem;
+    border-radius: 0.06rem;
+    margin-top:3.6rem;
+    margin-bottom:0.5rem;
+}
+/******微信服务号-个人信息-支付信息******************/
+.chose_pay{
+    width:100%;
+    position:relative;
+    margin-top:0.66rem;
+}
+.chose_pay i.chose_icon{
+    width:0.34rem;
+    height:0.34rem;
+    background:url("../images/bg.png") -0.4rem -0.02rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+}
+.chose_pay>h1{
+    font-size:0.32rem;
+    color:#2f2f2f;
+    margin-bottom:0.26rem;
+}
+.chose_pay_method{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+    height:1.4rem;
+    line-height:1.4rem;
+}
+.chose_pay_method a{
+    display: block;
+    /*width:49%;*/
+    height:100%;
+    text-align: center;
+    color:#2f2f2f;
+    font-size:0.32rem;
+    background:#c2c2c2;
+    margin-right:1%;
+    position:relative;
+    flex:1;
+}
+.chose_pay_method a:last-child{
+    margin:0;
+}
+.chose_pay_method .chose{
+    background:#353535;
+    color:#fff;
+}
+.chose i{
+    width:0.61rem;
+    height:0.61rem;
+    background:url("../images/bg.png") -0.86rem -0.02rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position:absolute;
+    top:28%;
+    left:12%;
+}
+/*银行卡列表*/
+.pay_list{
+    margin-top:0.7rem;
+}
+.pay_list li{
+    /*width: 100%;*/
+    background:#f7f7f7;
+    height:3rem;
+    padding:0.3rem 0.13rem 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top:0.3rem;
+    /*border:1px solid red;*/
+}
+.pay_list li>div.pay_list_top{
+    padding-bottom:0.15rem ;
+    border-bottom:1px solid #dcdcdc;
+}
+.pay_list li h1{
+    font-size:0.28rem;
+    color:#9f9f9f;
+    line-height:0.6rem;
+    height:0.6rem;
+}
+.pay_message{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+}
+.pay_list li span{
+    display: inline-block;
+    font-size:0.26rem;
+    color:#9f9f9f;
+    width:100%;
+    line-height:0.6rem;
+}
+.pay_message h1{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+}
+.pay_message div{
+    width:38%;
+}
+.pay_list_bottom{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    width:100%;
+    position: relative;
+}
+.pay_list_bottom a{
+    display: block;
+    font-size:0.28rem;
+    color:#2f2f2f;
+    height:1.3rem;
+    line-height:1.3rem;
+}
+/*.pay_list_bottom>div{
+    display: block;
+    font-size:0.28rem;
+    color:#2f2f2f;
+    height:1.3rem;
+    line-height:1.3rem;
+}*/
+.pay_list_bottom input[type=radio]{
+    display: none;
+}
+.pay_list_bottom label{
+    display: inline-block;
+    cursor: pointer;
+    position:relative;
+    font-size:0.28rem;
+    padding-left:0.76rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pay_list_bottom label:before{
+    content:'';
+    display: inline-block;
+    width:0.44rem;
+    height:0.44rem;
+    background-image:url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-position:-0.03rem -0.65rem;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position:absolute;
+    top:30%;
+    left:4%;
+    margin-right:0.18rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pay_list_bottom .labelCheck:before{
+    content:'';
+    background-position:-0.56rem -0.67rem;
+}
+/*将父元素a标签改为div就没事*/
+/*.pay_list_bottom input[type=radio]:checked+label:before{
+    content:'';
+    width:0.44rem;
+    height:0.44rem;
+    background-image:url("../images/bg.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    background-position:-0.56rem -0.67rem;
+}*/
+.pay_list_bottom>i{
+    width:1px;
+    height:0.13rem;
+    background:#c5c5c5;
+    margin:0 5%;
+    position:absolute;
+    top:46%;
+    right:14%;
+
+}
+a.chose_active{
+    widtH:60%;
+}
+a.edit{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    text-align: center;
+    color:#5f91fe;
+}
+a.del{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    text-align: center;
+}
+.pay_list a i{
+    /*width:0.44rem;
+    height:0.44rem;
+    background-image:url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-position:-0.03rem -0.65rem;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position:relative;
+    top:8%;
+    left:5%;
+    margin-right:0.4rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;*/
+}
+
+/*新增银行卡*/
+.add_card{
+    border:none;
+    width:100%;
+    height:0.82rem;
+    line-height:0.82rem;
+    color:#fff;
+    font-size:0.32rem;
+    text-align: center;
+    background:#515151;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    margin-top:0.88rem;
+    margin-bottom:0.4rem;
+}
+/*删除按钮的弹窗*/
+.del_pop{
+    width:100%;
+    min-width:7rem;
+    background:rgba(0,0,0,0.6);
+    position:absolute;
+    top:0;
+    left:0;
+    display: none;
+}
+.pop_del_box{
+    box-sizing: border-box;
+    height:3.2rem;
+    background:#fff;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto 5%;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+
+}
+.pop_del_box>div{
+    width:100%;
+    text-align: center;
+    font-size:0.32rem;
+    color:#000;
+}
+.pop_txt{
+    height:75%;
+    line-height:2.4rem;
+}
+.pop_btn{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    height:25%;
+    line-height:0.8rem;
+}
+.pop_btn>a{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    color:#fff;
+}
+.pop_btn .pop_cancel{
+    background:#515151;
+}
+.pop_btn .pop_del{
+    background:#2f2f2f;
+}
+/******微信服务号-联系我们******************/
+.contact_us{
+    width:100%;
+    min-width:7rem;
+    background:#f4f4f4;
+    height:3.32rem;
+    line-height:3.32rem;
+    margin-bottom:0.36rem;
+}
+.contact_us_content{
+    padding:0.68rem 0.45rem;
+    height:100%;
+}
+.contact_us_content h1{
+    font-size:0.28rem;
+    color:#2f2f2f;
+    line-height:0.45rem;
+    height:0.45rem;
+    /*font-weight: bold;*/
+}
+.contact_us_content p{
+    font-size:0.26rem;
+    color:#2f2f2f;
+    line-height:0.42rem;
+    font-family:'宋体';
+}
+.contact_us_bottom{
+    width:100%;
+    height:3.36rem;
+    min-widtH:7rem;
+    background:url("../images/contack_us.png") no-repeat;
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    position: relative;
+}
+.contact_us_detail{
+    background:rgba(0,0,0,0.6);
+    height:70%;
+    border:1px solid #312e29;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto 5%;
+    padding:0.5rem 0.9rem;
+}
+.contact_us_detail h1{
+    font-size:0.28rem;
+    color:#fff;
+    line-height:0.38rem;
+}
+/*问卷介绍*/
+a.join_survey{
+    display: block;
+    border:none;
+    width:100%;
+    height:0.82rem;
+    background:#515151;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    line-height:0.82rem;
+    color:#fff;
+    font-size:0.36rem;
+    text-align: center;
+    margin-top:1.1rem;
+    margin-bottom:0.4rem;
+
+}
+/******微信服务号-问卷中心-可参与调研******************/
+.survey_chose{
+    width:100%;
+    min-width:7rem;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    height:0.82rem;
+    line-height: 0.82rem;
+}
+.survey_chose a{
+    -moz-box-flex:1.0;
+    -webkit-box-flex: 1.0;
+    -ms-flex: 1.0;
+    box-flex:1.0;
+    flex:1;
+    -webkit-flex:1;
+    font-size:0.26rem ;
+    color:#fff;
+    background:#515151;
+    text-align: center;
+}
+.survey_chose .surveyActive{
+    background:#353535;
+}
+.survey_content{
+    width:100%;
+    min-width:7rem;
+}
+.survey_content li{
+    height:2.9rem;
+    /*width:100%;*/
+    padding:0.42rem 0.25rem;
+    border-bottom:0.02rem solid #f2f2f2;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.survey_content li>a{
+    display: block;
+    width:100%;
+    height:100%;
+}
+.survey_content li h1{
+    font-size:0.3rem;
+    color:#2f2f2f;
+    height:0.62rem;
+    line-height:0.62rem;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+.survey_content li p span{
+    display: inline-block;
+    font-size:0.26rem;
+    height:0.4rem;
+    line-height:0.4rem;
+    color:#949494;
+}
+.survey_content .award{
+    margin-top:0.1rem;
+    position:relative;
+}
+.award div>i{
+    width:0.24rem;
+    height:0.24rem;
+    background:url("../images/bg.png") -1.57rem -0.02rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position:absolute;
+    top:10%;
+}
+.award div>span:nth-child(2){
+    padding-left:0.4rem;
+}
+.award div>span{
+    display: inline-block;
+    font-size:0.24rem;
+    color:#ff7200;
+}
+.award .no-join{
+    font-size:0.26rem;
+    color:#5f91fe;
+}
+.award .join{
+    color:#a6a6a6;
+}
+@media screen and (max-width:320px){
+    .award div>i{
+        background:url("../images/bg.png") -1.54rem -0.02rem no-repeat;
+        -webkit-background-size: 2rem 2rem;
+        background-size: 2rem 2rem;
+    }
+}
+/******微信服务号-我的钱包******************/
+.balance{
+    height:5rem;
+}
+.balance h1{
+    font-size:0.36rem;
+    color:#2f2f2f;
+    height:0.82rem;
+    line-height:0.82rem;
+    margin-top:1.3rem;
+    padding-left:0.64rem;
+}
+.balance h1>span{
+    display: inline-block;
+    width:3.82rem;
+    height:100%;
+    border:1px solid #e5e5e5;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin:0 0.3rem;
+    padding-left:0.3rem;
+}
+.balance .withdraw{
+    border:none;
+    display: block;
+    width:2.88rem;
+    height:0.82rem;
+    line-height:0.82rem;
+    color:#fff;
+    text-align: center;
+    font-size:0.36rem;
+    -webkit-border-radius: 0.05rem;
+    -moz-border-radius: 0.05rem;
+    border-radius: 0.05rem;
+    background:#515151;
+    margin:0.84rem 30% 0;
+}
+.trading_record>h1{
+    font-size:0.32rem;
+    color:#2f2f2f;
+    padding-left:0.68rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position:relative;
+    height:0.56rem;
+    line-height:0.56rem;
+}
+.trading_record>h1>i{
+    widtH:0.32rem;
+    height:0.32rem;
+    background:url("../images/bg.png") -0.02rem -1.16rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position:absolute;
+    top:22%;
+    left:4%;
+}
+.trading_record table{
+    width:100%;
+    min-width:7rem;
+    padding:0 0.25rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-collapse:collapse;
+    table-layout: fixed;
+    margin-bottom:0.4rem;
+}
+.trading_record tr{
+    height:0.65rem;
+    line-height:0.65rem;
+    width:100%;
+}
+
+.trading_record th{
+    color:#fff;
+}
+.trading_record td{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color:#7b7b7b;
+    text-align: center;
+}
+.trading_record table td:nth-child(1){
+    width:3.5rem;
+    padding-left:0.25rem;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    /*display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;*/
+}
+/*.trading_record table td:nth-child(2){*/
+/*padding-left:7%;*/
+/*}*/
+/*.trading_record table td:nth-child(3){*/
+/*text-align: center;*/
+/*}*/
+/*.trading_record table td:nth-child(4){*/
+/*text-align: center;*/
+/*}*/
+.trading_record tr:nth-child(odd){
+    background:#f7f7f7;
+}
+.trading_record tr:nth-child(1){
+    background:#515151;
+}
+.chose_pay i.width_draw{
+    width:0.34rem;
+    height:0.34rem;
+    background:url("../images/bg.png") -1.2rem -1.2rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+}
+a.commit_with_draw{
+    margin-top:0.96rem;
+    margin-bottom:0.5rem;
+}
+.edit_information ul>li>div>a{
+    display: block;
+    /*width:100%;*/
+    height:100%;
+    padding-left:1.5rem;
+    /*padding-left:0.5rem;*/
+    font-size:0.24rem;
+    color:#2f2f2f;
+    position:relative;
+
+}
+.edit_information ul>li>div>a>i{
+    width:0.24rem;
+    height:0.24rem;
+    background:url("../images/bg.png") -0.02rem -1.59rem no-repeat;
+    -webkit-background-size: 2rem 2rem;
+    background-size: 2rem 2rem;
+    position: absolute;
+    top:35%;
+    left:18%;
+    /*left:1%;*/
+}
+/******微信服务号-问卷页面第三方******************/
+.question{
+    width:100%;
+    min-width: 7rem;
+}
+.question_message{
+    width: 100%;
+    height:3.24rem;
+    background:#f4f4f4;
+    margin-top:2.14rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.question_message>div{
+    height:100%;
+    padding:1.16rem 0.65rem 1.12rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.question_message h1{
+    text-align: center;
+    font-size:18px;
+    color:#2f2f2f;
+    line-height:0.38rem;
+    height:0.38rem;
+    margin-bottom:0.26rem;
+}
+.question_message h2{
+    text-align: center;
+    font-size:15px;
+    color: #2f2f22;
+    height:0.3rem;
+    line-heighT:0.3rem;
+}
+@media screen and (max-width: 320px){
+    .question_message>div{
+        padding:1.16rem 0.28rem 1.12rem;
+    }
+}
+/*新增页面*/
+.manage_list li{
+    height:auto;
+}
+.manage_list li>div.pay_list_top{
+    border-bottom:0;
+}
+/*.edit_information ul>li>div>a{*/
+/*position:relative;*/
+/*}*/
+.edit_information li span.tip{
+    width:45%;
+    position:absolute;
+    font-size:12px;
+    right:5%;
+    top:0;
+    text-align: right;
+    color:red;
+}
+@media screen and (max-width: 320px) {
+    .edit_information li span.tip{
+        width:45%;
+    }
+    .edit_information li span.tip{
+        right:4%;
+    }
+
+}

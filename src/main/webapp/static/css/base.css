@@ -1,0 +1,124 @@
+﻿*{
+    margin:0;
+    padding:0;
+    list-style:none;
+    /*去除ios手机点击时有阴影*/
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color:transparent;
+}
+html{
+	/*解决rem页面页面加载闪烁问题*/
+	/*font-size:50px;*/
+}
+body{
+    /*为了解决rem设置的fontSize对行内元素的影响必须设置*/
+    font:12px 'Microsoft YaHei',Arial,Helvetica,sans-serif;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    height:auto;
+    color:#373737;
+    background-color: #fff;
+    margin:0 auto;
+    position:relative;
+    max-width:750px;
+   -webkit-text-size-adjust:none;
+}
+h1,h2,h3,h4,h5,h6,b,strong{
+    font-weight:normal;
+    font-size:13px;
+}
+img{
+    display: block;
+    border:none;
+    vertical-align: bottom;
+    width:100%;
+}
+input{
+    outline:none;
+    border:none 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+.clear:after{
+    clear:both;
+    content:'';
+    display:block;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+/*弹性布局*/
+.flex{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack:justify;
+	justify-content: space-between;
+	-webkit-justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+/*外边框溢出*/
+.overflow:before{
+	content:'';
+	display: table;
+}
+#header{
+    width:100%;
+    height:0.8rem;
+    background:#000;
+    position:relative;
+}
+#header>h1{
+    font-size:0.4rem;
+    color:#fff;
+    text-align: center;
+    line-height:0.8rem;
+}
+/*防止手机点击图片被放大*/
+img{ pointer-events: none; }
+/*三个小圆点*/
+#header ul{
+    line-height:0.8rem;
+    position:absolute;
+    top:-0.18rem;
+    right:0.25rem;
+}
+#header ul>li{
+    float:left;
+}
+#header ul>li>i{
+    display: inline-block;
+    width:0.2rem;
+    height:0.2rem;
+    background:#fff;
+    border-radius: 50%;
+    margin-left:0.1rem;
+}
+@media (min-width: 320px){html{font-size: 266.667%;} }
+@media (min-width: 360px){html{font-size: 300%;} }
+@media (min-width: 375px){html{font-size: 312.5%;;} }
+@media (min-width: 384px){html{font-size: 320%;} }
+@media (min-width: 414px){html{font-size: 345%;} }
+@media (min-width: 448px){html{font-size: 373.333%;} }
+@media (min-width: 480px){html{font-size: 400%;} }
+@media (min-width: 512px){html{font-size: 426.667%;} }
+@media (min-width: 544px){html{font-size: 453.333%;} }
+@media (min-width: 576px){html{font-size: 480%;} }
+@media (min-width: 608px){html{font-size: 506.667%;} }
+@media (min-width: 640px){html{font-size: 533.333%;} }
+@media (min-width: 750px){html{font-size: 625%;;} }
+
+
